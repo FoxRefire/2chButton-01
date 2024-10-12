@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>押すと(1/2)^(押した回数)で一億円をもらえるが、当たるまで呼吸が止まるボタン</title>
+    </head>
+    <body>
+        呼吸禁止の条件:
+        <select id="breathCondition">
+            <option value="180000">水中-常人(3分)</option>
+            <option value="300000">水中-江頭(5分)</option>
+            <option value="600000">水中-オウム(１０分)</option>
+            <option value="30000">気道閉塞(30秒)</option>
+            <option value="1000">細胞呼吸の停止(1秒)</option>
+            <option value="0">死亡なし(無制限)</option>
+        </select><br>
+
+        成功時、再押下を許可する:
+        <input id="isAllowRenew" type="checkbox"><br>
+
+        <br><br>
+
+        押した回数:
+        <val id="pressTimes">0</val><br>
+
+        全体当選確率:
+        <val id="totalWinPercentage">-%</val><br>
+
+        次回当選確率:
+        <val id="nextWinPercentage">50%</val><br>
+
+        <button id="restart" onclick="location.reload()">やり直す</button>
+
+        <br><br>
+
+        <button id="push" style="font-size: 5em">ボタン</button><br>
+
+        <br><br>
+
+        <h2>履歴</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>回数</th>
+                    <th>全体当選確率</th>
+                    <th>次回当選確率</th>
+                    <th>結果</th>
+                </tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+        </table>
+
+        <br><br>
+
+        <a href="https://tomcat.2ch.sc/test/read.cgi/livejupiter/1597746838/">元ネタ</a><br>
+        <a href="https://github.com/FoxRefire/2chButton-01">Github</a><br>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
